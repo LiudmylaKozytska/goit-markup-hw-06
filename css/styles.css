@@ -806,7 +806,7 @@ img {
 
 .checkbox-label::before {
     position: absolute;
-    left: -25px;
+    left: 15px;
     bottom: 5px;
     content: '';
     width: 16px;
