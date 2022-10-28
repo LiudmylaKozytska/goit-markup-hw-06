@@ -61,6 +61,29 @@ img {
     padding: 94px 0;
 }
 
+.btn {
+    border: none;
+    cursor: pointer;
+}
+
+.main-button {
+    background-color: var(--color-decoration);
+    box-shadow: var(--main-button-shadow);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: var(--color-white);
+    transition: background-color 250ms var(--animation-timing-function);
+}
+
+.main-button:hover,
+.main-button:focus {
+    background-color: var(--color-button-active);
+
+}
+
 /* навігація */
 .header {
     border-bottom: 1px solid #ECECEC;
@@ -171,7 +194,10 @@ img {
     padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),  url("../images/hero-image.jpg");
     background-repeat: no-repeat;
-    background-size: 1600px;
+    background-size: cover;
+    margin: 0 auto;
+    background-position: center;
+    max-width: 1600px;
 }
 
 .hero-content {
@@ -193,29 +219,9 @@ img {
     color: var(--color-white);
 }
 
-.main-button {
+.primary-button {
     width: 216px;
     height: 50px;
-    background-color: var(--color-decoration);
-    box-shadow: var(--main-button-shadow);
-    border-radius: 4px;
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    color: var(--color-white);
-    transition: background-color 250ms var(--animation-timing-function);
-}
-
-.main-button:hover,
-.main-button:focus {
-        background-color: var(--color-button-active);
-    
-}
-
-.btn {
-    border: none;
-    cursor: pointer;
 }
 
 /* особливості */
@@ -527,20 +533,6 @@ img {
     justify-content: center;
     margin-left: 12px;
     width: 200px;
-    background-color: var(--color-decoration);
-    box-shadow: var(--main-button-shadow);
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 16px;
-    color: var(--color-white);
-    transition: background-color 250ms var(--animation-timing-function);
-    
-}
-
-.footer-button:hover,
-.footer-button:focus {
-        background-color: var(--color-button-active);
-    
 }
 
 .send-icon {
@@ -782,15 +774,15 @@ img {
 }
 
 .checkbox-label {
-    position: absolute; 
-    padding-left: 40px;
+    position: relative;
+    left: 40px;
 }
 
 .checkbox-icon {
     position: absolute;
     display: block;
-    left: 15px;
-    bottom: -19px;
+    left: -25px;
+    bottom: 2px;
     opacity: 0;
     border-radius: 2px;
     background-color: var(--color-decoration);
@@ -805,8 +797,8 @@ img {
 
 .checkbox-label::before {
     position: absolute;
-    left: 15px;
-    bottom: 5px;
+    left: -25px;
+    bottom: 2px;
     content: '';
     width: 16px;
     height: 15px;
@@ -814,15 +806,21 @@ img {
     border-radius: 2px;
 }
 
-.checkbox-input:checked ~ .checkbox-icon {
+.checkbox-input:checked ~ .checkbox-label .checkbox-icon {
     opacity: 1;
 }
+
+.modal-link {
+    color: var(--color-decoration);
+}
+
 .button-section {
     position: relative;
 }
 
 .submit-button {
     position: absolute;
+    width: 200px;
     height: 50px;
     left: 50%;
     transform: translateX(-50%);
