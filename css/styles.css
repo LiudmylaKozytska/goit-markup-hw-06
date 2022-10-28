@@ -777,8 +777,6 @@ img {
 
 .checkbox-section {
     position: relative;
-    display: flex;
-    align-items: center;
     margin-bottom: 30px;
 
 }
@@ -792,6 +790,7 @@ img {
     position: absolute;
     display: block;
     left: 15px;
+    bottom: -19px;
     opacity: 0;
     border-radius: 2px;
     background-color: var(--color-decoration);
